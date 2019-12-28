@@ -55,3 +55,5 @@ But at least it's kinda cool and old-school vibey(?)
 
 ### The game works! (very happy :-D ): 
 ![Game](images/game1.jpg)
+
+(if you were wondering: yes, the paper that my setup is sitting on is the FSM diagram lol)
