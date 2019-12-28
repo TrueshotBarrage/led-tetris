@@ -1,6 +1,8 @@
 # LED Tetris
 Programmed with C/C++ for Arduino Mega 2560.
 
+<img src="images/logo-light.jpeg" width="60%">
+
 ## What you need
 * A microcontroller (I personally used a Mega 2560.)
 * An analog joystick
@@ -40,3 +42,10 @@ But at least it's kinda cool and old-school vibey(?)
 * When rotating a block, the code does not rigorously check if the block in its newly rotated position does not coincide with any existing ground blocks. Consequently, some weird things can happen, like your block going through the ground. 
   * Similarly, shifting a block all the way left or right of the grid, then rotating it, sometimes rotates the entire block such that it lies outside the 8x8 grid (and thus you get a "truncated" block).
   * Somewhat hard to fix, so I'll keep thinking of an optimal way to fix it. For now, the bug remains. 
+
+## Images
+### Check out some images!
+![Final FSM](images/FSM.png)
+![Old FSM](images/original-FSM.jpg)
+![Overview](images/overview.jpg)
+![Game](images/game1.jpg)
