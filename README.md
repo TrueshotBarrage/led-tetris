@@ -44,8 +44,14 @@ But at least it's kinda cool and old-school vibey(?)
   * Somewhat hard to fix, so I'll keep thinking of an optimal way to fix it. For now, the bug remains. 
 
 ## Images
-### Check out some images!
+### Final FSM Diagram: 
 ![Final FSM](images/FSM.png)
+
+### Original FSM Diagram hand-drawn: 
 ![Old FSM](images/original-FSM.jpg)
+
+### Circuit overview: 
 ![Overview](images/overview.jpg)
+
+### The game works! (very happy :-D ): 
 ![Game](images/game1.jpg)
