@@ -1,4 +1,4 @@
-# MinimaLED Tetris
+# LED Tetris
 Programmed with C/C++ for Arduino Mega 2560.
 
 <img src="images/logo-light.jpeg" width="60%">
