@@ -9,8 +9,6 @@ Programmed with C/C++ for Arduino Mega 2560.
 * 8x8 LED grid (MAX7219)
 * A few M-M & M-F wires & breadboard
 
-Schematics coming soon...
-
 ## Functionality
 ~~Planned development until school starts again (around late January 2020).
 Will finish before then, hopefully.~~
@@ -47,6 +45,11 @@ But at least it's kinda cool and old-school vibey(?)
   * Somewhat hard to fix, so I'll keep thinking of an optimal way to fix it. For now, the bug remains. 
 
 ## Images
+
+### Schematics: 
+![Joystick wiring](images/joystick-diagram.png)
+![LED wiring](images/led-diagram.png)
+
 ### Final FSM Diagram: 
 ![Final FSM](images/FSM.png)
 
