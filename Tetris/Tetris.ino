@@ -445,6 +445,15 @@ void drop() {
   dropCount++;
 }
 
+// Reverts dropping the tetronimo.
+void undrop() {
+  for (int i = 0; i < 7; i++) {
+    block[i] = block[i+1];
+  }
+  block[7] = B00000000;
+  dropCount--;
+}
+
 // Rotates the tetronimo 90 degrees clockwise.
 void rotate() {
   // 0...90...180...270...0...
@@ -462,7 +471,7 @@ void rotate() {
   }
 
   // Choosing a new tetronimo as above always 
-  // resets the value, so we need to vertically 
+  // resets the position, so we need to vertically 
   // offset it to the right position. 
   for (int i = 0; i < dropCount; i++) {
     drop();
@@ -472,18 +481,28 @@ void rotate() {
   // We apply the same offsetting procedure here, 
   // except horizontally. 
   if (shiftCount < 0) {
-    for (int i = 0; i > shiftCount; i--) {
-      for (int j = 0; j < 8; j++) {
-        block[j] = block[j] << 1;
-      }
+    int temp = shiftCount;
+    shiftCount = 0;
+    for (int i = 0; i > temp; i--) {
+      shiftLeftNoGround();
     }
   } else if (shiftCount > 0) {
-    for (int i = 0; i < shiftCount; i++) {
-      for (int j = 0; j < 8; j++) {
-        block[j] = block[j] >> 1;
-      }
+    int temp = shiftCount;
+    shiftCount = 0;
+    for (int i = 0; i < temp; i++) {
+      shiftRightNoGround();
     }
   }
+
+  /*// Then, we check if the new block position 
+  // conflicts with any existing ground blocks. 
+  // As of right now, nothing happens. 
+  bool possible = true;
+  for (int j = 0; j < 8; j++) {
+    if ((block[j] & ground[j]) != 0) {
+      possible = false;
+    }
+  } */
 }
 
 // Shifts the tetronimo left one column, if possible.
@@ -510,6 +529,44 @@ void shiftRight() {
   
   for (int i = 0; i < 8; i++) {
     if (((block[i] >> 1) << 1) != block[i] || ((block[i] >> 1) & ground[i]) != 0) {
+      shiftable = false;
+      break;
+    }
+  }
+  if (shiftable) {
+    for (int i = 0; i < 8; i++) {
+      block[i] = block[i] >> 1;
+    }
+    shiftCount++;
+  }
+}
+
+// Shifts the tetronimo left one column, if possible. 
+// Does not take ground into consideration. 
+void shiftLeftNoGround() {
+  bool shiftable = true;
+  
+  for (int i = 0; i < 8; i++) {
+    if ((block[i] << 1) > 255) {
+      shiftable = false;
+      break;
+    }
+  }
+  if (shiftable) {
+    for (int i = 0; i < 8; i++) {
+      block[i] = block[i] << 1;
+    }
+    shiftCount--;
+  }
+}
+
+// Shifts the tetronimo right one column, if possible. 
+// Does not take ground into consideration. 
+void shiftRightNoGround() {
+  bool shiftable = true;
+  
+  for (int i = 0; i < 8; i++) {
+    if (((block[i] >> 1) << 1) != block[i]) {
       shiftable = false;
       break;
     }
