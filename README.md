@@ -23,6 +23,9 @@ I dunno why I made the input device a joystick instead of something more convent
 But at least it's kinda cool and old-school vibey(?)
 
 ## Changelog
+* December 30th, 2019
+  * Pieces can now be rotated without going off the grid horizontally. 
+  * The problem still persists for overlapping with the ground, however. To be fixed in a later build.
 * December 27th, 2019
   * Finished project! (exception: one minor bug...)
   * Implemented pretty much every real function that tetris should have. Yesterday's work was mostly getting the framework down to implement these things easily.
@@ -40,7 +43,7 @@ But at least it's kinda cool and old-school vibey(?)
 
 ## Known bugs
 * When rotating a block, the code does not rigorously check if the block in its newly rotated position does not coincide with any existing ground blocks. Consequently, some weird things can happen, like your block going through the ground. 
-  * Similarly, shifting a block all the way left or right of the grid, then rotating it, sometimes rotates the entire block such that it lies outside the 8x8 grid (and thus you get a "truncated" block).
+  * ~~Similarly, shifting a block all the way left or right of the grid, then rotating it, sometimes rotates the entire block such that it lies outside the 8x8 grid (and thus you get a "truncated" block).~~ Fixed in Dec. 30 build.
   * Somewhat hard to fix, so I'll keep thinking of an optimal way to fix it. For now, the bug remains. 
 
 ## Images
