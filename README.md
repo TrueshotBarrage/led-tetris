@@ -1,4 +1,4 @@
-# LED Tetris
+# MinimaLED Tetris
 Programmed with C/C++ for Arduino Mega 2560.
 
 <img src="images/logo-light.jpeg" width="60%">
@@ -24,7 +24,7 @@ But at least it's kinda cool and old-school vibey(?)
   * Implemented pretty much every real function that tetris should have. Yesterday's work was mostly getting the framework down to implement these things easily.
     * This included rotate, place, place fast, game over, restart...
     * Pretty much all the transitions you see in the most recent FSM diagram
-  * Planning some more modifications (like adding T-spin maybe)
+  * Planning some more modifications (like adding wall kicks maybe)
 * December 26th, 2019
   * Bare-bones structure in place.
   * FSM finalized with the transitions, as well as some hardcoded conditions/inputs
