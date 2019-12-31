@@ -23,6 +23,9 @@ I dunno why I made the input device a joystick instead of something more convent
 But at least it's kinda cool and old-school vibey(?)
 
 ## Changelog
+* December 30th, 2019
+  * Pieces can now be rotated without going off the grid horizontally. 
+  * The problem still persists for overlapping with the ground, however. To be fixed in a later build.
 * December 27th, 2019
   * Finished project! (exception: one minor bug...)
   * Implemented pretty much every real function that tetris should have. Yesterday's work was mostly getting the framework down to implement these things easily.
