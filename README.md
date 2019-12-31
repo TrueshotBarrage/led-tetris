@@ -10,11 +10,6 @@ Programmed with C/C++ for Arduino Mega 2560.
 * A few M-M & M-F wires & breadboard
 
 ## Functionality
-~~Planned development until school starts again (around late January 2020).
-Will finish before then, hopefully.~~
-
-Finished way faster than expected. (Took around 50 hours total, in a single consecutive 7-day period.)
-
 Full Tetris game! Other than a minor bug (listed below), everything works pretty nicely. 
 Pins are configurable. Feel free to modify the code to your liking to let it run on your hardware. 
 I dunno why I made the input device a joystick instead of something more conventional. 
